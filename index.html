@@ -1,7 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Dein Name - Homepage</title>
+    <style>
+        body { font-family: Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        nav { margin-bottom: 30px; background: #f4f4f4; padding: 10px; }
+        nav a { margin-right: 15px; text-decoration: none; color: #0077cc; font-weight: bold; }
+        .project-list { list-style-type: none; padding: 0; }
+        .project-item { margin-bottom: 20px; }
+        .footer { margin-top: 50px; font-size: 0.8em; color: #777; border-top: 1px solid #eee; }
+    </style>
+</head>
 <body>
-    <h1>Hallo Welt!</h1>
-    <p>Meine erste Website auf GitHub Pages funktioniert.</p>
+
+    <h1>Dein Name</h1>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#projekte">Projekte</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <section>
+        <p>Willkommen auf meiner Seite. Ich bin [Dein Beruf/Hobby] und arbeite an [Thema].</p>
+    </section>
+
+    <h2 id="projekte">Meine Projekte (Bücher/Software)</h2>
+    <ul class="project-list">
+        <li class="project-item">
+            <strong>Projekt Eins:</strong> Eine kurze Beschreibung. 
+            [<a href="#">Link zum Code</a>] [<a href="#">PDF laden</a>]
+        </li>
+        <li class="project-item">
+            <strong>Projekt Zwei:</strong> Hier beschreibst du dein zweites Projekt.
+        </li>
+    </ul>
+
+    <div class="footer">
+        Zuletzt aktualisiert: März 2024
+    </div>
+
 </body>
 </html>
