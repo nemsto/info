@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nemanja Stojanović</title>
+    <title>Nemanja Stojanović | HU Berlin</title>
     
     <style>
+        /* ... (Restliches CSS wie zuvor) ... */
+
         body {
             font-family: Verdana, Geneva, sans-serif;
             font-size: 14px;
@@ -13,173 +15,86 @@
             max-width: 750px;
             margin: 60px auto;
             padding: 0 40px;
-            color: #000;
-            background-color: #fff;
+            color: #333;
+            background-color: #fdfdfd;
         }
 
         header {
-            border-bottom: 2px solid #000;
+            border-bottom: 2px solid #555;
             padding-bottom: 20px;
             margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Das neue NSt-Logo */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .nst-logo {
+            width: 40px;
+            height: 40px;
+            border: 1.5px solid #555;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            color: #111;
+            margin-right: 15px;
+            letter-spacing: -1px;
+            background-color: #fff;
+        }
+
+        .nst-logo span {
+            margin-left: 1px;
+        }
+
+        .nst-logo small {
+            font-size: 0.85em;
+            font-weight: normal;
         }
 
         h1 {
             font-size: 1.8em;
-            margin: 0 0 10px 0;
-            font-weight: bold;
-        }
-
-        .pronouns {
-            font-size: 0.5em;
-            font-weight: normal;
-            color: #666;
-            vertical-align: middle;
-            margin-left: 8px;
-        }
-
-        h2 {
-            font-size: 1.1em;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            border-bottom: 1px solid #000;
-            padding-bottom: 5px;
-            margin-top: 45px;
-            font-weight: bold;
-        }
-
-        nav {
-            font-size: 0.85em;
-            margin-top: 15px;
-        }
-
-        nav a {
-            margin-right: 20px;
-            text-decoration: none;
-            color: #000;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .intro {
-            font-size: 1.05em;
-            margin-bottom: 40px;
-        }
-
-        .cv-item {
-            display: flex;
-            margin-bottom: 25px;
-        }
-
-        .cv-date {
-            flex: 0 0 170px;
-            font-weight: bold;
-            color: #555;
-            font-size: 0.85em;
-        }
-
-        .cv-content {
-            flex: 1;
-        }
-
-        .institution {
-            color: #444;
-            display: block;
-            margin-bottom: 8px;
-            font-style: italic;
-        }
-
-        .work-tasks-header {
-            display: block;
-            margin-top: 12px;
-            margin-bottom: 4px;
-            font-weight: bold;
-            font-size: 0.9em;
-        }
-
-        .cv-content ul {
-            list-style-type: none;
-            padding-left: 0;
             margin: 0;
-        }
-
-        .cv-content li {
-            margin-bottom: 4px;
-            font-size: 0.95em;
-            padding-left: 15px;
-            position: relative;
-        }
-
-        .cv-content li::before {
-            content: "▪"; 
-            position: absolute;
-            left: 0;
-            color: #000;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            background: #fff;
-            padding: 20px;
-            border: 1px solid #000;
-        }
-
-        .skill-category strong {
-            display: block;
-            margin-bottom: 5px;
-            font-size: 0.9em;
-            text-decoration: underline;
-        }
-
-        .project-item {
-            padding: 15px;
-            border: 1px solid #000;
-            margin-bottom: 10px;
-        }
-
-        .license-tag {
-            font-size: 0.8em;
-            color: #000;
-            margin-top: 12px;
+            color: #111;
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
         }
 
-        .license-icon {
-            height: 18px;
-            margin-right: 8px;
-            filter: grayscale(100%);
-        }
-
-        .footer {
-            margin-top: 80px;
-            font-size: 0.75em;
-            color: #666;
-            text-align: center;
-            border-top: 1px solid #000;
-            padding-top: 20px;
-        }
-
-        .footer-license {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 10px;
-        }
-
-        a { color: #000; text-decoration: underline; }
-        a:hover { background: #000; color: #fff; text-decoration: none; }
-
-        .orcid-icon {
-            width: 18px;
-            vertical-align: middle;
-            margin-left: 8px;
-            filter: grayscale(100%) contrast(200%);
-        }
+        /* ... (Rest der Styles bleibt gleich) ... */
+        
+        .pronouns { font-size: 0.5em; font-weight: normal; color: #888; margin-left: 8px; vertical-align: middle; }
+        .orcid-icon { width: 18px; vertical-align: middle; margin-left: 8px; }
+        nav { font-size: 0.85em; margin-top: 20px; }
+        nav a { margin-right: 20px; text-decoration: none; color: #555; font-weight: bold; }
+        nav a:hover { color: #111; text-decoration: underline; }
+        
+        /* Hilfsklasse für Graustufen-Design */
+        h2 { font-size: 1.1em; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-top: 45px; color: #555; font-weight: bold; }
+        .cv-item { display: flex; margin-bottom: 25px; }
+        .cv-date { flex: 0 0 170px; font-weight: bold; color: #888; font-size: 0.85em; }
+        .cv-content { flex: 1; }
+        .institution { color: #777; display: block; margin-bottom: 8px; font-style: italic; }
+        .work-tasks-header { display: block; margin-top: 12px; margin-bottom: 4px; font-weight: bold; font-size: 0.9em; color: #555; }
+        .cv-content ul { list-style-type: none; padding-left: 0; margin: 0; }
+        .cv-content li { margin-bottom: 4px; font-size: 0.95em; padding-left: 15px; position: relative; }
+        .cv-content li::before { content: "▪"; position: absolute; left: 0; color: #aaa; }
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; background: #fff; padding: 20px; border: 1px solid #ddd; }
+        .skill-category strong { display: block; margin-bottom: 5px; font-size: 0.9em; color: #555; text-decoration: underline; }
+        .project-item { padding: 15px; border: 1px solid #ddd; background: #fff; }
+        .license-tag { font-size: 0.8em; color: #888; margin-top: 12px; display: flex; align-items: center; }
+        .license-icon { height: 18px; margin-right: 8px; filter: grayscale(100%) opacity(0.7); }
+        .footer { margin-top: 80px; font-size: 0.75em; color: #999; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
+        .footer-license { display: flex; justify-content: center; align-items: center; margin-top: 10px; }
+        a { color: #555; text-decoration: underline; }
+        a:hover { background: #f0f0f0; color: #111; text-decoration: none; }
 
         @media (max-width: 600px) {
             .cv-item { flex-direction: column; }
@@ -191,13 +106,16 @@
 <body>
 
     <header>
-        <h1>
-            Nemanja Stojanović, B. A. LIS 
-            <span class="pronouns">(er/ihm)</span>
-            <a href="https://orcid.org/0009-0004-9270-3880" target="_blank">
-                <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" class="orcid-icon">
-            </a>
-        </h1>
+        <div class="logo-container">
+            <div class="nst-logo">N<span>St</span></div>
+            <h1>
+                Nemanja Stojanović, B. A. LIS 
+                <span class="pronouns">(er/ihm)</span>
+                <a href="https://orcid.org/0009-0004-9270-3880" target="_blank">
+                    <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" class="orcid-icon">
+                </a>
+            </h1>
+        </div>
         <nav>
             <a href="#about">Über mich</a>
             <a href="#cv">Lebenslauf</a>
@@ -306,5 +224,7 @@
         </div>
     </footer>
 
+</body>
+</html>
 </body>
 </html>
