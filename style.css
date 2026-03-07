@@ -66,21 +66,29 @@ h1 { font-size: 1.8em; margin: 0; color: var(--header-text); font-weight: 700; }
 nav a { 
     margin-right: 25px; 
     text-decoration: none; 
-    color: var(--header-text);
+    color: #000000 !important; 
+    font-weight: 700; 
+    transition: 0.2s;
+}
+
+nav a { 
+    margin-right: 25px; 
+    text-decoration: none; 
+    color: var(--header-text) !important; 
     font-weight: 700; 
     transition: 0.2s;
 }
 
 nav a:hover { 
-    color: var(--orcid-green); 
+    color: var(--orcid-green) !important; 
     text-decoration: underline; 
 }
 
 .lang-switch {
-    margin-right: 0;
+    margin-right: 0 !important;
     font-size: 0.85em;
     padding: 4px 10px;
-    border: 1.5px solid var(--header-text);
+    border: 1.5px solid var(--header-text) !important; 
     border-radius: 4px;
     color: var(--header-text) !important;
     font-weight: bold;
@@ -91,8 +99,8 @@ nav a:hover {
 }
 
 .lang-switch:hover {
-    background-color: var(--header-text);
-    color: white !important;
+    background-color: var(--header-text) !important;
+    color: var(--bg-color) !important;
 }
 h2 {
     font-size: 1.3em;
