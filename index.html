@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nemanja Stojanović</title>
+    <title>Nemanja Stojanović | HU Berlin</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,9 +20,8 @@
             --line-color: #444;
             --accent-bg: #fff;
             --hover-bg: #f5f5f5;
-            /* ORCID GRÜN als Akzentfarbe */
             --orcid-green: #A6CE39;
-            --link-color: #7a9a23; /* Etwas dunkleres Grün für bessere Lesbarkeit auf weiß */
+            --link-color: #7a9a23; 
             --summary-hover: #fcfcfc;
         }
 
@@ -62,14 +61,31 @@
 
         h1 { font-size: 1.8em; margin: 0; color: var(--header-text); font-weight: 700; }
 
-        .orcid-line {
-            margin-top: 10px;
+        /* KONTAKTBEREICH FIX: Alles in einer Zeile */
+        .contact-container {
+            margin-top: 15px;
             display: flex;
+            flex-direction: row;
             align-items: center;
+            flex-wrap: nowrap; /* Verhindert Umbruch auf Desktop */
             font-size: 0.9em;
+            color: var(--secondary-text);
         }
 
-        .orcid-icon { width: 18px; margin-right: 10px; }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            white-space: nowrap; /* Verhindert Zeilenumbruch innerhalb der Mail */
+        }
+
+        .orcid-icon { width: 16px; margin-right: 8px; }
+        
+        .separator {
+            color: var(--orcid-green);
+            margin: 0 12px;
+            font-weight: bold;
+            user-select: none;
+        }
 
         nav { font-size: 0.9em; margin-top: 20px; }
         nav a { margin-right: 20px; text-decoration: none; color: var(--secondary-text); font-weight: 700; }
@@ -85,7 +101,6 @@
             font-weight: 700;
         }
 
-        /* Standard Box */
         .content-box {
             padding: 20px;
             border: 1px solid var(--border-color);
@@ -95,10 +110,9 @@
             position: relative;
         }
 
-        /* Aktuelle Boxen (M.A. und FU) */
+        /* GRÜNE BOXEN FÜR AKTUELL */
         .content-box.active {
             border-left: 4px solid var(--orcid-green);
-            border-color: var(--border-color) var(--border-color) var(--border-color) var(--orcid-green);
         }
 
         .cv-item { display: flex; }
@@ -164,47 +178,51 @@
             .cv-item { flex-direction: column; }
             .cv-date { margin-bottom: 10px; flex: 0 0 auto; }
             .skills-grid { grid-template-columns: 1fr; }
+            /* Mobil dürfen sie untereinander rutschen, wenn der Platz nicht reicht */
+            .contact-container { flex-wrap: wrap; gap: 5px; }
+            .separator { display: none; }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Nemanja Stojanović, B. A. LIS <span style="font-size: 0.5em; font-weight: 300; color: var(--light-text);">(er/ihm)</span></h1>
-    
-    <div class="contact-container">
-        <div class="contact-item">
-            <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" class="orcid-icon" style="width: 16px; margin-right: 8px;">
-            <a href="https://orcid.org/0009-0004-9270-3880" target="_blank">0009-0004-9270-3880</a>
-        </div>
+    <header>
+        <h1>Nemanja Stojanović, B. A. LIS <span style="font-size: 0.5em; font-weight: 300; color: var(--light-text);">(er/ihm)</span></h1>
         
-        <span class="separator">•</span>
+        <div class="contact-container">
+            <div class="contact-item">
+                <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" class="orcid-icon">
+                <a href="https://orcid.org/0009-0004-9270-3880" target="_blank">0009-0004-9270-3880</a>
+            </div>
+            
+            <span class="separator">•</span>
 
-        <div class="contact-item">
-            nemanja.stojanovic (at) posteo.de
+            <div class="contact-item">
+                nemanja.stojanovic (at) posteo.de
+            </div>
         </div>
-    </div>
 
-    <nav>
-        <a href="#about">Über mich</a>
-        <a href="#cv">Lebenslauf</a>
-        <a href="#skills">Fähigkeiten</a>
-        <a href="#projekte">Publikationen</a>
-    </nav>
-</header>
+        <nav>
+            <a href="#about">Über mich</a>
+            <a href="#cv">Lebenslauf</a>
+            <a href="#skills">Fähigkeiten</a>
+            <a href="#projekte">Publikationen</a>
+        </nav>
+    </header>
 
     <main>
         <section id="about">
             <p>
-                Hallo zusammen! Ich bin Masterstudent am <strong>Institut für Bibliotheks- und Informationswissenschaft</strong> der Humboldt-Universität zu Berlin. 
-                Ich habe mich auf die <strong>Provenienzforschung in Bibliotheken</strong> spezialisiert; interessiere mich aber auch für die Themen der Informationsethik, Information Retrieval und Bibliotheken als Integrationsfaktor.
+                Masterstudent am <strong>Institut für Bibliotheks- und Informationswissenschaft</strong> der Humboldt-Universität zu Berlin. 
+                Spezialisierung auf <strong>Provenienzforschung</strong> sowie die Erschließung wissenschaftlicher Altbestände und moderner Fachliteratur.
+            </p>
         </section>
 
         <h2 id="cv">Bibliothekarischer Werdegang</h2>
         
         <div class="content-box active">
             <div class="cv-item">
-                <div class="cv-date">Ab 04/2026</div>
+                <div class="cv-date">Seit 04/2026</div>
                 <div class="cv-content">
                     <strong>M. A. Information Science</strong>
                     <span class="institution">Humboldt-Universität zu Berlin</span>
@@ -226,10 +244,9 @@
                         </summary>
                         <div class="work-details-content">
                             <ul>
-                                <li><strong>Zentrale Themen:</strong>Informationsproduktion und -management, Formal- und Inhaltserschließung, Informations- und Kommunikationstechnologie  & Human Information Behavior</li>
-                                <li><strong>Wahlpflicht:</strong> Human-Computer-Interaction & Wirtschaftliche Grundkompetenzen sowie Öffentlichkeitsarbeit in Bibliotheken</li>
-                                <li><strong>Zweitfach:</strong>Geschichtswissenschaft (Abschlussnote 2,4)</li>
-                                <li><strong>Epochenschwerpunkte:</strong> Neuere und Neueste Geschichte (Novemberpogrome und jüdische Bibliotheken 1938, Protestbewegungen ab 1968), Alte Geschichte (Cicero, Livius), Mittelalterliche Geschichte (Biologie und Gender im Mittelalter) </li>
+                                <li><strong>Themen:</strong> Metadaten, Sacherschließung, Provenienzforschung & Informationsethik</li>
+                                <li><strong>Bachelorarbeit:</strong> „Provenienzforschung zu NS-Raubgut in Bibliotheken: Eine inhaltsanalytische Studie...“</li>
+                                <li><strong>Wahlpflicht:</strong> Digital Humanities und Historische Buchbestände</li>
                             </ul>
                         </div>
                     </details>
@@ -271,7 +288,7 @@
                             <div class="summary-header">
                                 <strong>Bibliothekarische Hilfskraft</strong>
                                 <a href="https://www.polsoz.fu-berlin.de/bibliothek/mitarbeiter/team/stojanovic_n/index.html" target="_blank" class="profile-link" title="Mitarbeiterseite">
-                                    <span style="text-decoration: underline;">Zur Seite der FU</span>
+                                    👤 <span style="text-decoration: underline;">Zur Seite der FU</span>
                                 </a>
                                 <span class="institution">Freie Universität Berlin, FB Sozialwissenschaften & Osteuropastudien</span>
                                 <span class="details-toggle">Tätigkeitsschwerpunkte</span>
@@ -319,14 +336,10 @@
     <footer class="footer">
         &copy; 2026 Nemanja Stojanović
         <div style="margin-top: 10px; opacity: 0.5;">
-            Der Code & die Inhalte sind unter CC0 1.0 lizenziert. <br>
-            Diese Seite wurde mit der Unterstützung von Google Gemini erstellt.
+            Code & Inhalte lizenziert unter CC0 1.0 <br>
+            Erstellt mit Unterstützung von Google Gemini
         </div>
     </footer>
-
-</body>
-</html>
-</footer>
 
 </body>
 </html>
