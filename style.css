@@ -66,13 +66,13 @@ h1 { font-size: 1.8em; margin: 0; color: var(--header-text); font-weight: 700; }
 nav a { 
     margin-right: 25px; 
     text-decoration: none; 
-    color: var(--header-text); 
+    color: var(--header-text);
     font-weight: 700; 
     transition: 0.2s;
 }
 
 nav a:hover { 
-    color: var(--orcid-green);
+    color: var(--orcid-green); 
     text-decoration: underline; 
 }
 
@@ -80,7 +80,7 @@ nav a:hover {
     margin-right: 0;
     font-size: 0.85em;
     padding: 4px 10px;
-    border: 1.5px solid var(--header-text); 
+    border: 1.5px solid var(--header-text);
     border-radius: 4px;
     color: var(--header-text) !important;
     font-weight: bold;
@@ -92,7 +92,7 @@ nav a:hover {
 
 .lang-switch:hover {
     background-color: var(--header-text);
-    color: var(--bg-color) !important; 
+    color: white !important;
 }
 h2 {
     font-size: 1.3em;
