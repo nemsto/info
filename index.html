@@ -5,39 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nemanja Stojanović</title>
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glitch-fonts/latin-modern-mono@1.1.0/index.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glitch-fonts/latin-modern-roman@1.1.0/index.min.css">
     
     <style>
         body {
-            font-family: "Latin Modern Mono", monospace;
+            /* Wechsel zu LM Roman */
+            font-family: "Latin Modern Roman", serif;
+            font-size: 18px; /* Serifenschriften brauchen oft etwas mehr Größe */
             line-height: 1.6;
-            max-width: 850px;
-            margin: 50px auto;
-            padding: 0 30px;
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 40px;
             color: #1a1a1a;
             background-color: #fff;
             text-align: justify;
         }
 
         h1 {
-            font-size: 1.8em;
+            font-size: 2.2em;
+            font-weight: bold;
             border-bottom: 2px solid #333;
             padding-bottom: 10px;
             margin-bottom: 5px;
+            text-align: left;
         }
 
         h2 {
-            font-size: 1.4em;
+            font-size: 1.5em;
+            font-weight: bold;
             border-bottom: 1px solid #ccc;
             padding-bottom: 5px;
-            margin-top: 40px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            margin-top: 50px;
+            text-transform: none;
+            text-align: left;
         }
 
         nav {
             margin-bottom: 40px;
-            font-weight: bold;
+            font-family: sans-serif; /* Navigation oft besser in Sans-Serif für Kontrast */
+            font-size: 0.9em;
         }
 
         nav a {
@@ -52,37 +58,49 @@
 
         /* CV Styling */
         .cv-section {
-            margin-top: 20px;
+            margin-top: 25px;
         }
 
         .cv-item {
             display: flex;
-            margin-bottom: 15px;
-            border-bottom: 1px dotted #ddd;
-            padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 15px;
         }
 
         .cv-date {
             flex: 0 0 200px;
             font-weight: bold;
-            color: #444;
+            color: #333;
+            text-align: left;
         }
 
         .cv-content {
             flex: 1;
         }
 
+        .cv-content ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 8px;
+        }
+
+        .cv-content li {
+            margin-bottom: 4px;
+        }
+
         /* Projekt Styling */
         .project-item {
-            margin-bottom: 25px;
-            padding-left: 15px;
-            border-left: 2px solid #eee;
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 3px solid #eee;
+            text-align: left;
         }
 
         .footer {
-            margin-top: 60px;
-            font-size: 0.85em;
-            color: #666;
+            margin-top: 80px;
+            font-size: 0.8em;
+            color: #777;
             border-top: 1px solid #eee;
             padding-top: 20px;
             text-align: center;
@@ -98,7 +116,7 @@
         }
 
         @media (max-width: 600px) {
-            body { margin: 20px auto; padding: 0 15px; }
+            body { margin: 20px auto; padding: 0 20px; font-size: 17px; }
             .cv-item { flex-direction: column; }
             .cv-date { margin-bottom: 5px; flex: 0 0 auto; }
         }
@@ -121,15 +139,16 @@
             <p>
                 Willkommen auf meiner Seite. Ich bin Masterstudent am 
                 <strong>Institut für Bibliotheks- und Informationswissenschaft</strong> 
-                an der Humboldt-Universität zu Berlin. Mein Fokus liegt auf der 
-                Provenienzforschung sowie der Analyse wissenschaftlicher Kommunikationsstrukturen.
+                an der Humboldt-Universität zu Berlin. Meine Schwerpunkte liegen in der 
+                Provenienzforschung sowie der Analyse wissenschaftlicher Fachliteratur.
             </p>
         </section>
 
-        <h2 id="cv">Akademischer Werdegang</h2>
+        <h2 id="cv">Akademischer & Beruflicher Werdegang</h2>
         <div class="cv-section">
+            
             <div class="cv-item">
-                <div class="cv-date">Seit 04/2026</div>
+                <div class="cv-date">Seit 10/2024</div>
                 <div class="cv-content">
                     <strong>M. A. Bibliotheks- und Informationswissenschaft</strong><br>
                     Humboldt-Universität zu Berlin
@@ -137,39 +156,31 @@
             </div>
 
             <div class="cv-item">
-                <div class="cv-date">10/2021 – 09/2025</div>
-                <div class="cv-content">
-                    <strong>B. A. Bibliotheks- und Informationswissenschaft</strong><br>
-                    [Humboldt-Universität zu Berlin]<br>
-                </div>
-            </div>
-
-<div class="cv-item">
-                <div class="cv-date">09/2024 – Heute</div>
-                <div class="cv-content">
-                    <strong>Bibliothekarische Hilfskraft</strong><br>
-                    [Freie Universität, Universitätsbibliotek, Bibliothek für SoWi und OEI], Berlin<br>
-                    <em>Tätigkeitsschwerpunkte:</em>
-                    <ul style="list-style-type: none; padding-left: 0; margin-top: 5px;">
-                        <li>&ndash; Benutzerservice: Ausleihe, Rücknahme und Kontenverwaltung</li>
-                        <li>&ndash; Auskunftsdienst: Fachliche Beratung zu Bestand und Bibliotheksbenutzung</li>
-                        <li>&ndash; Technischer Support: Unterstützung bei der Nutzung der IT-Infrastruktur (WLAN, Thin Clients, Reprografie)</li>
-                        <li>&ndash; Magazindienst & Lesesaal: Bereitstellung geschützter Bestände und Aushebung aus dem geschlossenen Magazin</li>
-                     </ul>
-                </div>
-            </div>
-
-            <div class="cv-item">
-                <div class="cv-date">03/2024 – 12/2024</div>
+                <div class="cv-date">[Zeitraum 1]</div>
                 <div class="cv-content">
                     <strong>Studentische Hilfskraft</strong><br>
-                    [Deutsches Institut für Menschenrechte, Institutsbibliothek], Berlin<br>
+                    [Name der Institution], Berlin<br>
                     <em>Tätigkeitsschwerpunkte:</em>
-                    <ul style="list-style-type: none; padding-left: 0; margin-top: 5px;">
+                    <ul>
                         <li>&ndash; Erschließung: Aufsatz-Katalogisierung (RDA) im PICA-System (K10plus) sowie Sacherschließung</li>
                         <li>&ndash; Web-Redaktion: Pflege des Zeitschrifteninhaltsdienstes via CMS TYPO3</li>
                         <li>&ndash; Benutzungsdienst: Fernleihverwaltung, interne Ausleihe sowie Aufsicht und Auskunft</li>
                         <li>&ndash; Bestandsverwaltung: Loseblattsammlungen und allgemeine Magazindienste</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-item">
+                <div class="cv-date">[Zeitraum 2]</div>
+                <div class="cv-content">
+                    <strong>Studentische Hilfskraft (Benutzungsdienst)</strong><br>
+                    [Name der Institution], Berlin<br>
+                    <em>Tätigkeitsschwerpunkte:</em>
+                    <ul>
+                        <li>&ndash; Benutzerservice: Ausleihe, Rücknahme und Kontenverwaltung</li>
+                        <li>&ndash; Auskunftsdienst: Fachliche Beratung zu Bestand und Bibliotheksbenutzung</li>
+                        <li>&ndash; Technischer Support: Unterstützung bei der Nutzung der IT-Infrastruktur (WLAN, Thin Clients)</li>
+                        <li>&ndash; Magazindienst & Lesesaal: Bereitstellung geschützter Bestände und Aushebung aus dem Magazin</li>
                     </ul>
                 </div>
             </div>
@@ -184,11 +195,6 @@
                 [<a href="https://edoc.hu-berlin.de/items/d105036b-7c94-49f1-b7a7-10108b44f29a" target="_blank">E-Doc HU Berlin</a>] 
                 [<a href="https://edoc.hu-berlin.de/server/api/core/bitstreams/3c5c2801-a7ec-404d-82c5-af274c706bbf/content" target="_blank">PDF laden</a>]
             </article>
-
-            <article class="project-item">
-                <strong>Master-Thesis (in Planung):</strong><br>
-                Thematische Schwerpunkte: [Dein Thema hier einfügen].
-            </article>
         </div>
     </main>
 
@@ -198,5 +204,4 @@
     </footer>
 
 </body>
-</html>
 </html>
