@@ -57,30 +57,25 @@
 
         h1 {
             font-size: 1.8em;
-            margin: 0 0 10px 0;
+            margin: 0;
             color: var(--header-text);
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
         }
 
-        .pronouns {
-            font-size: 0.5em;
-            font-weight: normal;
-            color: var(--light-text);
-            vertical-align: middle;
-            margin-left: 8px;
+        .orcid-line {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 0.9em;
         }
 
         .orcid-icon {
             width: 18px;
-            vertical-align: middle;
-            margin-left: 10px;
+            margin-right: 10px;
         }
 
         nav {
             font-size: 0.85em;
-            margin-top: 15px;
+            margin-top: 20px;
         }
 
         nav a {
@@ -106,7 +101,6 @@
             font-weight: bold;
         }
 
-        /* Lebenslauf-Struktur */
         .cv-item {
             display: flex;
             margin-bottom: 25px;
@@ -120,16 +114,12 @@
             padding-top: 2px;
         }
 
-        .cv-content {
-            flex: 1;
-        }
+        .cv-content { flex: 1; }
 
-        /* Details & Summary (Aufklapp-Funktion) */
         details { width: 100%; }
         summary { cursor: pointer; list-style: none; outline: none; }
         summary::-webkit-details-marker { display: none; }
 
-        .summary-header { display: block; padding: 2px 0; }
         .summary-header:hover {
             background-color: var(--summary-hover);
             border-radius: 4px;
@@ -158,26 +148,10 @@
             font-size: 0.9em;
         }
 
-        .cv-content ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin: 0;
-        }
+        .cv-content ul { list-style-type: none; padding-left: 0; margin: 0; }
+        .cv-content li { margin-bottom: 4px; padding-left: 15px; position: relative; }
+        .cv-content li::before { content: "▪"; position: absolute; left: 0; color: var(--light-text); }
 
-        .cv-content li {
-            margin-bottom: 4px;
-            padding-left: 15px;
-            position: relative;
-        }
-
-        .cv-content li::before {
-            content: "▪"; 
-            position: absolute;
-            left: 0;
-            color: var(--light-text);
-        }
-
-        /* Fähigkeiten */
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -195,27 +169,12 @@
             text-decoration: underline;
         }
 
-        /* Publikationen & Lizenzen */
         .project-item {
             padding: 15px;
             border: 1px solid var(--border-color);
             background: var(--accent-bg);
         }
 
-        .license-tag {
-            display: inline-flex;
-            align-items: center;
-            margin-top: 10px;
-            vertical-align: middle;
-        }
-
-        .license-icon {
-            height: 16px;
-            filter: grayscale(100%);
-            opacity: 0.6;
-        }
-
-        /* Footer */
         .footer {
             margin-top: 80px;
             font-size: 0.75em;
@@ -238,13 +197,13 @@
 <body>
 
     <header>
-        <h1>
-            Nemanja Stojanović, B. A. LIS 
-            <span class="pronouns">(er/ihm)</span>
-            <a href="https://orcid.org/0009-0004-9270-3880" target="_blank">
-                <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" class="orcid-icon">
-            </a>
-        </h1>
+        <h1>Nemanja Stojanović, B. A. LIS <span style="font-size: 0.5em; font-weight: normal; color: var(--light-text);">(er/ihm)</span></h1>
+        
+        <div class="orcid-line">
+            <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" class="orcid-icon">
+            <a href="https://orcid.org/0009-0004-9270-3880" target="_blank">https://orcid.org/0009-0004-9270-3880</a>
+        </div>
+
         <nav>
             <a href="#about">Über mich</a>
             <a href="#cv">Lebenslauf</a>
@@ -261,7 +220,7 @@
             </p>
         </section>
 
-        <h2 id="cv">Akademischer & Beruflicher Werdegang</h2>
+        <h2 id="cv">Bibliothekarischer Werdegang</h2>
         
         <div class="cv-item">
             <div class="cv-date">Seit 04/2026</div>
@@ -308,9 +267,9 @@
                 <details>
                     <summary>
                         <div class="summary-header">
-                            <strong>Bibliothekarische Hilfskraft (Benutzungsdienst)</strong>
+                            <strong>Bibliothekarische Hilfskraft</strong>
                             <a href="https://www.polsoz.fu-berlin.de/bibliothek/mitarbeiter/team/stojanovic_n/index.html" target="_blank" style="font-size: 0.85em; margin-left: 5px; font-weight: normal;">[Mitarbeiterseite ↗]</a>
-                            <span class="institution">Freie Universität Berlin, Universitätsbibliothek (SoWi & Osteuropa)</span>
+                            <span class="institution">Freie Universität Berlin, FB Sozialwissenschaften & Osteuropastudien</span>
                             <span class="details-toggle">Tätigkeitsschwerpunkte anzeigen...</span>
                         </div>
                     </summary>
@@ -328,48 +287,32 @@
 
         <h2 id="skills">Fähigkeiten</h2>
         <div class="skills-grid">
-            <div class="skill-category">
-                <strong>Metadaten & Katalogisierung</strong>
-                RDA, PICA, K10plus, Sacherschließung
-            </div>
-            <div class="skill-category">
-                <strong>Software & CMS</strong>
-                TYPO3, Alma, Zotero, MS Office, LibreOffice
-            </div>
-            <div class="skill-category">
-                <strong>Sprachen</strong>
-                Deutsch & Serbokroatisch (2L1), Englisch (B2/C1)
-            </div>
-            <div class="skill-category">
-                <strong>Forschungsschwerpunkte</strong>
-                Provenienzforschung, NS-Raubgut, Fachliteraturanalyse
-            </div>
+            <div class="skill-category"><strong>Metadaten</strong> RDA, PICA, K10plus, Sacherschließung</div>
+            <div class="skill-category"><strong>Software & CMS</strong> TYPO3, Alma, Zotero, MS Office</div>
+            <div class="skill-category"><strong>Sprachen</strong> Deutsch & Serbokroatisch (2L1), Englisch (B2/C1)</div>
+            <div class="skill-category"><strong>Fokus</strong> Provenienzforschung, NS-Raubgut</div>
         </div>
 
         <h2 id="projekte">Publikationen</h2>
         <div class="project-item">
-            <strong>Provenienzforschung zu NS-Raubgut in Bibliotheken:</strong> Eine inhaltsanalytische Studie deutschsprachiger Fachliteratur (2014–2024) [Bachelorarbeit].<br>
-            <em>Berliner Handreichungen zur Bibliotheks- und Informationswissenschaft, 566.</em><br>
+            <strong>Stojanović, N. (2025). Provenienzforschung zu NS-Raubgut in Bibliotheken. Berliner Handreichungen zur Bibliotheks- und Informationswissenschaft, 566<br>
             
             <a href="https://edoc.hu-berlin.de/collections/727648d3-78c8-4cc0-8556-5d80f75be349/search" target="_blank">edoc-Server</a> | 
             <a href="https://doi.org/10.18452/35711" target="_blank">https://doi.org/10.18452/35711</a> | 
             <a href="https://edoc.hu-berlin.de/server/api/core/bitstreams/3c5c2801-a7ec-404d-82c5-af274c706bbf/content" target="_blank">PDF</a>
             
             <br>
-            <span class="license-tag">
-                <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="CC" class="license-icon" style="margin-right: 2px;">
-                <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="BY" class="license-icon" style="margin-right: 5px;">
-                <span style="font-size: 0.85em; color: var(--light-text);">CC BY 4.0</span>
+            <span style="display: inline-flex; align-items: center; margin-top: 10px; opacity: 0.6;">
+                <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="CC" style="height: 16px; margin-right: 2px; filter: grayscale(100%);">
+                <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="BY" style="height: 16px; margin-right: 5px; filter: grayscale(100%);">
+                <span style="font-size: 0.85em;">CC BY 4.0</span>
             </span>
         </div>
     </main>
 
     <footer class="footer">
-        &copy; 2026 Nemanja Stojanović &middot; HU Berlin
-        <div style="margin-top: 10px; opacity: 0.5;">
-            <img class="license-icon" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/cc-zero.png" alt="CC0" style="height: 15px; vertical-align: middle;">
-            Code & Inhalte lizenziert unter CC0 1.0
-        </div>
+        &copy; 2026 Nemanja Stojanović &middot
+        <div style="margin-top: 10px; opacity: 0.5;">Code lizenziert unter CC0 1.0</div>
     </footer>
 
 </body>
