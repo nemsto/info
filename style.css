@@ -76,7 +76,7 @@ h1 {
 }
 
 .separator { 
-    color: var(--orcid-green); 
+    color: var(--secondary-text);
     margin: 0 12px; 
     font-weight: bold; 
     user-select: none; 
