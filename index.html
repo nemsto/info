@@ -20,7 +20,9 @@
             --line-color: #444;
             --accent-bg: #fff;
             --hover-bg: #f5f5f5;
-            --link-color: #555;
+            /* ORCID GRÜN als Akzentfarbe */
+            --orcid-green: #A6CE39;
+            --link-color: #7a9a23; /* Etwas dunkleres Grün für bessere Lesbarkeit auf weiß */
             --summary-hover: #fcfcfc;
         }
 
@@ -35,7 +37,7 @@
                 --line-color: #888;
                 --accent-bg: #222;
                 --hover-bg: #333;
-                --link-color: #999;
+                --link-color: #A6CE39;
                 --summary-hover: #252525;
             }
         }
@@ -71,7 +73,7 @@
 
         nav { font-size: 0.9em; margin-top: 20px; }
         nav a { margin-right: 20px; text-decoration: none; color: var(--secondary-text); font-weight: 700; }
-        nav a:hover { color: var(--header-text); text-decoration: underline; }
+        nav a:hover { color: var(--orcid-green); text-decoration: underline; }
 
         h2 {
             font-size: 1.3em;
@@ -83,12 +85,20 @@
             font-weight: 700;
         }
 
+        /* Standard Box */
         .content-box {
             padding: 20px;
             border: 1px solid var(--border-color);
             background: var(--accent-bg);
             margin-bottom: 20px;
             border-radius: 2px;
+            position: relative;
+        }
+
+        /* Aktuelle Boxen (M.A. und FU) */
+        .content-box.active {
+            border-left: 4px solid var(--orcid-green);
+            border-color: var(--border-color) var(--border-color) var(--border-color) var(--orcid-green);
         }
 
         .cv-item { display: flex; }
@@ -101,13 +111,12 @@
 
         .details-toggle {
             font-size: 0.85em;
-            color: var(--light-text);
+            color: var(--orcid-green);
             margin-top: 10px;
             display: inline-block;
             font-weight: bold;
         }
 
-        /* Das Plus-Symbol dreht sich beim Öffnen (optional via CSS steuerbar) */
         details[open] .details-toggle::before { content: "[−] "; }
         details:not([open]) .details-toggle::before { content: "[+] "; }
 
@@ -116,14 +125,14 @@
         .work-details-content {
             margin-top: 15px;
             padding: 12px;
-            border-left: 2px solid var(--border-color);
+            border-left: 2px solid var(--orcid-green);
             background-color: var(--bg-color);
             font-size: 0.95em;
         }
 
         .cv-content ul { list-style-type: none; padding-left: 0; margin: 0; }
         .cv-content li { margin-bottom: 6px; padding-left: 18px; position: relative; }
-        .cv-content li::before { content: "▪"; position: absolute; left: 0; color: var(--light-text); }
+        .cv-content li::before { content: "▪"; position: absolute; left: 0; color: var(--orcid-green); }
 
         .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; }
         .skill-category { padding: 15px; border: 1px solid var(--border-color); background: var(--accent-bg); }
@@ -136,7 +145,7 @@
             display: inline-flex;
             align-items: center;
             font-weight: normal;
-            color: var(--light-text);
+            color: var(--orcid-green);
         }
 
         .footer {
@@ -148,7 +157,7 @@
             padding-top: 25px;
         }
 
-        a { color: var(--link-color); text-decoration: underline; }
+        a { color: var(--link-color); text-decoration: underline; transition: 0.2s; }
         a:hover { background: var(--hover-bg); color: var(--header-text); text-decoration: none; }
 
         @media (max-width: 600px) {
@@ -186,7 +195,7 @@
 
         <h2 id="cv">Bibliothekarischer Werdegang</h2>
         
-        <div class="content-box">
+        <div class="content-box active">
             <div class="cv-item">
                 <div class="cv-date">Seit 04/2026</div>
                 <div class="cv-content">
@@ -200,8 +209,22 @@
             <div class="cv-item">
                 <div class="cv-date">10/2021 &ndash; 09/2025</div>
                 <div class="cv-content">
-                    <strong>B. A. Bibliotheks- und Informationswissenschaft</strong>
-                    <span class="institution">Humboldt-Universität zu Berlin (Abschlussnote: 2,2)</span>
+                    <details>
+                        <summary>
+                            <div class="summary-header">
+                                <strong>B. A. Bibliotheks- und Informationswissenschaft</strong>
+                                <span class="institution">Humboldt-Universität zu Berlin (Abschlussnote: 2,2)</span>
+                                <span class="details-toggle">Studienschwerpunkte</span>
+                            </div>
+                        </summary>
+                        <div class="work-details-content">
+                            <ul>
+                                <li><strong>Themen:</strong> Metadaten, Sacherschließung, Provenienzforschung & Informationsethik</li>
+                                <li><strong>Bachelorarbeit:</strong> „Provenienzforschung zu NS-Raubgut in Bibliotheken: Eine inhaltsanalytische Studie...“</li>
+                                <li><strong>Wahlpflicht:</strong> Digital Humanities und Historische Buchbestände</li>
+                            </ul>
+                        </div>
+                    </details>
                 </div>
             </div>
         </div>
@@ -231,7 +254,7 @@
             </div>
         </div>
 
-        <div class="content-box">
+        <div class="content-box active">
             <div class="cv-item">
                 <div class="cv-date">Seit 09/2024</div>
                 <div class="cv-content">
@@ -240,7 +263,7 @@
                             <div class="summary-header">
                                 <strong>Bibliothekarische Hilfskraft</strong>
                                 <a href="https://www.polsoz.fu-berlin.de/bibliothek/mitarbeiter/team/stojanovic_n/index.html" target="_blank" class="profile-link" title="Mitarbeiterseite">
-                                    👤 <span style="text-decoration: underline;">Profil</span>
+                                    <span style="text-decoration: underline;">Zur Seite der FU</span>
                                 </a>
                                 <span class="institution">Freie Universität Berlin, FB Sozialwissenschaften & Osteuropastudien</span>
                                 <span class="details-toggle">Tätigkeitsschwerpunkte</span>
@@ -285,12 +308,16 @@
         </div>
     </main>
 
-<footer class="footer">
-    &copy; 2026 Nemanja Stojanović
-    <div style="margin-top: 10px; opacity: 0.5;">
-        Code & Inhalte lizenziert unter CC0 1.0 <br>
-        Erstellt mit Unterstützung von Google Gemini
-    </div>
+    <footer class="footer">
+        &copy; 2026 Nemanja Stojanović
+        <div style="margin-top: 10px; opacity: 0.5;">
+            Code & Inhalte lizenziert unter CC0 1.0 <br>
+            Erstellt mit Unterstützung von Google Gemini
+        </div>
+    </footer>
+
+</body>
+</html>
 </footer>
 
 </body>
