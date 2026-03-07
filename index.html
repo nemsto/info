@@ -31,6 +31,8 @@
             border-bottom: 1px solid #ccc;
             padding-bottom: 5px;
             margin-top: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         nav {
@@ -41,26 +43,40 @@
         nav a {
             margin-right: 20px;
             text-decoration: none;
-            color: #003366; /* Ein dezentes Uniblau */
+            color: #003366;
         }
 
         nav a:hover {
             text-decoration: underline;
         }
 
-        section {
-            margin-bottom: 30px;
+        /* CV Styling */
+        .cv-section {
+            margin-top: 20px;
         }
 
-        .project-list {
-            list-style-type: none;
-            padding: 0;
+        .cv-item {
+            display: flex;
+            margin-bottom: 15px;
+            border-bottom: 1px dotted #ddd;
+            padding-bottom: 10px;
         }
 
+        .cv-date {
+            flex: 0 0 200px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .cv-content {
+            flex: 1;
+        }
+
+        /* Projekt Styling */
         .project-item {
             margin-bottom: 25px;
             padding-left: 15px;
-            border-left: 1px solid #ddd;
+            border-left: 2px solid #eee;
         }
 
         .footer {
@@ -69,6 +85,7 @@
             color: #666;
             border-top: 1px solid #eee;
             padding-top: 20px;
+            text-align: center;
         }
 
         a {
@@ -80,12 +97,10 @@
             text-decoration: underline;
         }
 
-        /* Responsive Anpassung für Mobilgeräte */
         @media (max-width: 600px) {
-            body {
-                margin: 20px auto;
-                padding: 0 15px;
-            }
+            body { margin: 20px auto; padding: 0 15px; }
+            .cv-item { flex-direction: column; }
+            .cv-date { margin-bottom: 5px; flex: 0 0 auto; }
         }
     </style>
 </head>
@@ -95,8 +110,9 @@
         <h1>Nemanja Stojanović, B. A. LIS</h1>
         <nav>
             <a href="index.html">Home</a>
+            <a href="#cv">Lebenslauf</a>
             <a href="#projekte">Veröffentlichungen</a>
-            <a href="mailto:deine-email@hu-berlin.de">Kontakt</a>
+            <a href="mailto:nemanja.stojanovic@hu-berlin.de">Kontakt</a>
         </nav>
     </header>
 
@@ -105,12 +121,46 @@
             <p>
                 Willkommen auf meiner Seite. Ich bin Masterstudent am 
                 <strong>Institut für Bibliotheks- und Informationswissenschaft</strong> 
-                an der Humboldt-Universität zu Berlin. Meine Schwerpunkte liegen in der 
-                Provenienzforschung und der Analyse wissenschaftlicher Fachliteratur.
+                an der Humboldt-Universität zu Berlin. Mein Fokus liegt auf der 
+                Provenienzforschung sowie der Analyse wissenschaftlicher Kommunikationsstrukturen.
             </p>
         </section>
 
-        <h2 id="projekte">Meine Veröffentlichungen</h2>
+        <h2 id="cv">Akademischer Werdegang</h2>
+        <div class="cv-section">
+            <div class="cv-item">
+                <div class="cv-date">Seit 10/2024</div>
+                <div class="cv-content">
+                    <strong>M. A. Bibliotheks- und Informationswissenschaft</strong><br>
+                    Humboldt-Universität zu Berlin
+                </div>
+            </div>
+
+            <div class="cv-item">
+                <div class="cv-date">10/2020 – 09/2024</div>
+                <div class="cv-content">
+                    <strong>B. A. Bibliotheks- und Informationswissenschaft</strong><br>
+                    [Humboldt-Universität zu Berlin]<br>
+                    <em>Schwerpunkte: Human Information Behavior, Human-Computer Interaction, Provenienzforschung zu NS-Raubgut,</em>
+                </div>
+            </div>
+
+            <div class="cv-item">
+                <div class="cv-date">Praktische Tätigkeit</div>
+                <div class="cv-content">
+                    <strong>03/2024–06/2024: Praktikant im Rahmen des Pflichtpraktikums</strong><br>
+                    [Bibliothek am Deutsches Institut für Menschenrechte], Berlin
+
+                    <strong>06/2024–12/2024: Studentische Hilfskraft</strong><br>
+                    [Bibliothek am Deutsches Institut für Menschenrechte], Berlin
+
+                    <strong>03/2024–12/2024: Bibliothekarische Hilfskraft</strong><br>
+                    [Freie Universität, Bibliothek für Sozialwissenschaften und Osteuropastudien], Berlin
+                </div>
+            </div>
+        </div>
+
+        <h2 id="projekte">Veröffentlichungen</h2>
         <div class="project-list">
             <article class="project-item">
                 <strong>Provenienzforschung zu NS-Raubgut in Bibliotheken:</strong> 
@@ -121,16 +171,17 @@
             </article>
 
             <article class="project-item">
-                <strong>Weiteres Projekt / Thesis:</strong> 
-                Hier kannst du Details zu einem weiteren Forschungsprojekt oder deiner Masterarbeit einfügen.
+                <strong>Master-Thesis (in Planung):</strong><br>
+                Thematische Schwerpunkte: [Dein Thema hier einfügen].
             </article>
         </div>
     </main>
 
     <footer class="footer">
-        &copy; 2026 Nemanja Stojanović &middot; Humboldt-Universität zu Berlin &middot; 
+        &copy; 2026 Nemanja Stojanović &middot; Humboldt-Universität zu Berlin <br>
         Zuletzt aktualisiert: März 2026
     </footer>
 
 </body>
+</html>
 </html>
