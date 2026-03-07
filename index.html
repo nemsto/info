@@ -15,7 +15,7 @@
             padding: 0 30px;
             color: #222;
             background-color: #fff;
-            text-align: left; 
+            text-align: left;
         }
 
         h1 {
@@ -24,6 +24,25 @@
             border-bottom: 1px solid #333;
             padding-bottom: 8px;
             margin-bottom: 5px;
+        }
+
+        .orcid-line {
+            margin-bottom: 20px;
+            font-size: 0.85em;
+            color: #555;
+        }
+
+        .orcid-line a {
+            color: #555;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .orcid-line img {
+            width: 16px;
+            height: 16px;
+            margin-right: 4px;
         }
 
         h2 {
@@ -51,11 +70,6 @@
             text-decoration: underline;
         }
 
-        /* CV Styling */
-        .cv-section {
-            margin-top: 15px;
-        }
-
         .cv-item {
             display: flex;
             margin-bottom: 15px;
@@ -63,7 +77,7 @@
         }
 
         .cv-date {
-            flex: 0 0 160px; /* Schmalere Datumsspalte */
+            flex: 0 0 160px;
             font-weight: bold;
             color: #555;
             font-size: 0.9em;
@@ -71,6 +85,14 @@
 
         .cv-content {
             flex: 1;
+        }
+
+        /* Abstand vor Tätigkeitsschwerpunkten */
+        .work-tasks-header {
+            display: block;
+            margin-top: 12px; 
+            margin-bottom: 4px;
+            font-style: italic;
         }
 
         .cv-content ul {
@@ -82,10 +104,8 @@
         .cv-content li {
             margin-bottom: 3px;
             font-size: 0.95em;
-            color: #333;
         }
 
-        /* Projekt Styling */
         .project-item {
             margin-bottom: 20px;
             padding-left: 15px;
@@ -111,7 +131,6 @@
         }
 
         @media (max-width: 600px) {
-            body { margin: 20px auto; padding: 0 15px; }
             .cv-item { flex-direction: column; }
             .cv-date { margin-bottom: 2px; flex: 0 0 auto; }
         }
@@ -121,6 +140,14 @@
 
     <header>
         <h1>Nemanja Stojanović, B. A. LIS</h1>
+        
+        <div class="orcid-line">
+            <a href="https://orcid.org/0009-0004-9270-3880" target="_blank">
+                <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID iD icon">
+                https://orcid.org/0009-0004-9270-3880
+            </a>
+        </div>
+
         <nav>
             <a href="index.html">Home</a>
             <a href="#cv">Lebenslauf</a>
@@ -154,7 +181,7 @@
                 <div class="cv-date">10/2021 &ndash; 09/2025</div>
                 <div class="cv-content">
                     <strong>B. A. Bibliotheks- und Informationswissenschaft</strong><br>
-                    Zweitfach: Geschichtswissenschaften, Humboldt-Universität zu Berlin, Abschlussnote 2,2
+                    Humboldt-Universität zu Berlin (Abschlussnote: 2,2)
                 </div>
             </div>
 
@@ -163,7 +190,8 @@
                 <div class="cv-content">
                     <strong>Studentische Hilfskraft</strong><br>
                     Deutsches Institut für Menschenrechte, Institutsbibliothek, Berlin<br>
-                    <br> <em>Tätigkeitsschwerpunkte:</em>
+                    
+                    <span class="work-tasks-header">Tätigkeitsschwerpunkte:</span>
                     <ul>
                         <li>&ndash; Erschließung: Aufsatz-Katalogisierung (RDA) im PICA-System (K10plus)</li>
                         <li>&ndash; Web-Redaktion: Pflege des Zeitschrifteninhaltsdienstes via CMS TYPO3</li>
@@ -178,11 +206,12 @@
                 <div class="cv-content">
                     <strong>Bibliothekarische Hilfskraft (Benutzungsdienst)</strong><br>
                     Freie Universität Berlin, Universitätsbibliothek, Bibliothek für Sozialwissenschaften und Osteuropastudien<br>
-                    <br> <em>Tätigkeitsschwerpunkte:</em>
+                    
+                    <span class="work-tasks-header">Tätigkeitsschwerpunkte:</span>
                     <ul>
                         <li>&ndash; Benutzerservice: Ausleihe, Rücknahme und Kontenverwaltung</li>
                         <li>&ndash; Auskunftsdienst: Beratung zu Bestand und Bibliotheksbenutzung</li>
-                        <li>&ndash; Technischer Support: WLAN, Thin Clients, Drucker</li>
+                        <li>&ndash; Technischer Support: WLAN, Thin Clients</li>
                         <li>&ndash; Magazindienst & Lesesaal: Bereitstellung geschützter Bestände</li>
                     </ul>
                 </div>
