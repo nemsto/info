@@ -13,7 +13,6 @@
     --summary-hover: #fcfcfc;
 }
 
-/* Dark Mode Automatik */
 @media (prefers-color-scheme: dark) {
     :root {
         --bg-color: #1a1a1a;
@@ -50,7 +49,6 @@ header {
 
 h1 { font-size: 1.8em; margin: 0; color: var(--header-text); font-weight: 700; }
 
-/* Kontaktzeile: Alles nebeneinander */
 .contact-container {
     margin-top: 15px;
     display: flex;
@@ -149,7 +147,6 @@ details:not([open]) .details-toggle::before { content: "[+] "; }
 a { color: var(--link-color); text-decoration: underline; transition: 0.2s; }
 a:hover { background: var(--hover-bg); color: var(--header-text); text-decoration: none; }
 
-/* Responsive Design für Handys */
 @media (max-width: 600px) {
     .cv-item { flex-direction: column; }
     .cv-date { margin-bottom: 10px; flex: 0 0 auto; }
