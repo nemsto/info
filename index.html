@@ -5,51 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nemanja Stojanović</title>
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glitch-fonts/latin-modern-roman@1.1.0/index.min.css">
-    
     <style>
         body {
-            /* Wechsel zu LM Roman */
-            font-family: "Latin Modern Roman", serif;
-            font-size: 18px; /* Serifenschriften brauchen oft etwas mehr Größe */
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 0 40px;
-            color: #1a1a1a;
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 14px; /* Kleinere, kompaktere Schriftgröße */
+            line-height: 1.5;
+            max-width: 750px; /* Etwas schmaler für bessere Lesbarkeit */
+            margin: 40px auto;
+            padding: 0 30px;
+            color: #222;
             background-color: #fff;
-            text-align: justify;
+            text-align: left; /* Linksbündig wirkt bei kleinerer serifenloser Schrift oft sauberer */
         }
 
         h1 {
-            font-size: 2.2em;
+            font-size: 1.8em;
             font-weight: bold;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 8px;
             margin-bottom: 5px;
-            text-align: left;
         }
 
         h2 {
-            font-size: 1.5em;
+            font-size: 1.2em;
             font-weight: bold;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-            margin-top: 50px;
-            text-transform: none;
-            text-align: left;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 3px;
+            margin-top: 35px;
+            color: #333;
         }
 
         nav {
-            margin-bottom: 40px;
-            font-family: sans-serif; /* Navigation oft besser in Sans-Serif für Kontrast */
-            font-size: 0.9em;
+            margin-bottom: 30px;
+            font-size: 0.85em;
         }
 
         nav a {
-            margin-right: 20px;
+            margin-right: 15px;
             text-decoration: none;
             color: #003366;
+            font-weight: bold;
         }
 
         nav a:hover {
@@ -58,21 +53,20 @@
 
         /* CV Styling */
         .cv-section {
-            margin-top: 25px;
+            margin-top: 15px;
         }
 
         .cv-item {
             display: flex;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #f0f0f0;
-            padding-bottom: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
         }
 
         .cv-date {
-            flex: 0 0 200px;
+            flex: 0 0 160px; /* Schmalere Datumsspalte */
             font-weight: bold;
-            color: #333;
-            text-align: left;
+            color: #555;
+            font-size: 0.9em;
         }
 
         .cv-content {
@@ -82,32 +76,33 @@
         .cv-content ul {
             list-style-type: none;
             padding-left: 0;
-            margin-top: 8px;
+            margin-top: 5px;
         }
 
         .cv-content li {
-            margin-bottom: 4px;
+            margin-bottom: 3px;
+            font-size: 0.95em;
+            color: #333;
         }
 
         /* Projekt Styling */
         .project-item {
-            margin-bottom: 30px;
-            padding-left: 20px;
-            border-left: 3px solid #eee;
-            text-align: left;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 2px solid #eee;
         }
 
         .footer {
-            margin-top: 80px;
-            font-size: 0.8em;
-            color: #777;
+            margin-top: 60px;
+            font-size: 0.75em;
+            color: #888;
             border-top: 1px solid #eee;
-            padding-top: 20px;
+            padding-top: 15px;
             text-align: center;
         }
 
         a {
-            color: #0044cc;
+            color: #0055aa;
             text-decoration: none;
         }
 
@@ -116,9 +111,9 @@
         }
 
         @media (max-width: 600px) {
-            body { margin: 20px auto; padding: 0 20px; font-size: 17px; }
+            body { margin: 20px auto; padding: 0 15px; }
             .cv-item { flex-direction: column; }
-            .cv-date { margin-bottom: 5px; flex: 0 0 auto; }
+            .cv-date { margin-bottom: 2px; flex: 0 0 auto; }
         }
     </style>
 </head>
@@ -155,17 +150,25 @@
                 </div>
             </div>
 
+           <div class="cv-item">
+                <div class="cv-date">10/2021 &ndash; 09/2025</div>
+                <div class="cv-content">
+                    <strong>B. A. Bibliotheks- und Informationswissenschaft</strong><br>
+                    Humboldt-Universität zu Berlin
+                </div>
+            </div>
+
             <div class="cv-item">
-                <div class="cv-date">03/2024–12/2024</div>
+                <div class="cv-date">03/2024 &ndash; 12/2024</div>
                 <div class="cv-content">
                     <strong>Studentische Hilfskraft</strong><br>
                     Deutsches Institut für Menschenrechte, Institutsbibliothek, Berlin<br>
                     <em>Tätigkeitsschwerpunkte:</em>
                     <ul>
-                        <li>&ndash; Erschließung: Aufsatz-Katalogisierung (RDA) im PICA-System (K10plus) sowie Sacherschließung</li>
+                        <li>&ndash; Erschließung: Aufsatz-Katalogisierung (RDA) im PICA-System (K10plus)</li>
                         <li>&ndash; Web-Redaktion: Pflege des Zeitschrifteninhaltsdienstes via CMS TYPO3</li>
-                        <li>&ndash; Benutzungsdienst: Fernleihverwaltung, interne Ausleihe sowie Aufsicht und Auskunft</li>
-                        <li>&ndash; Bestandsverwaltung: Loseblattsammlungen und allgemeine Magazindienste</li>
+                        <li>&ndash; Benutzungsdienst: Fernleihverwaltung, interne Ausleihe, Auskunft</li>
+                        <li>&ndash; Bestandsverwaltung: Loseblattsammlungen, Magazindienste</li>
                     </ul>
                 </div>
             </div>
@@ -174,13 +177,13 @@
                 <div class="cv-date">Seit 09/2024</div>
                 <div class="cv-content">
                     <strong>Bibliothekarische Hilfskraft (Benutzungsdienst)</strong><br>
-                    Freie Universität Berlin, Universitätsbibliothek, Bibliothek für Sozialwissenschaften und Osteuropastudien, Berlin<br>
+                    Freie Universität Berlin, Universitätsbibliothek, Bibliothek für Sozialwissenschaften und Osteuropastudien<br>
                     <em>Tätigkeitsschwerpunkte:</em>
                     <ul>
                         <li>&ndash; Benutzerservice: Ausleihe, Rücknahme und Kontenverwaltung</li>
-                        <li>&ndash; Auskunftsdienst: Fachliche Beratung zu Bestand und Bibliotheksbenutzung</li>
-                        <li>&ndash; Technischer Support: Unterstützung bei der Nutzung der IT-Infrastruktur (WLAN, Thin Clients)</li>
-                        <li>&ndash; Magazindienst & Lesesaal: Bereitstellung geschützter Bestände und Aushebung aus dem Magazin</li>
+                        <li>&ndash; Auskunftsdienst: Beratung zu Bestand und Bibliotheksbenutzung</li>
+                        <li>&ndash; Technischer Support: WLAN, Thin Clients</li>
+                        <li>&ndash; Magazindienst & Lesesaal: Bereitstellung geschützter Bestände</li>
                     </ul>
                 </div>
             </div>
@@ -189,9 +192,8 @@
         <h2 id="projekte">Veröffentlichungen</h2>
         <div class="project-list">
             <article class="project-item">
-                <strong>Provenienzforschung zu NS-Raubgut in Bibliotheken:</strong> 
-                Eine inhaltsanalytische Studie deutschsprachiger Fachliteratur (2014–2024).<br>
-                <em>Berliner Handreichungen zur Bibliotheks- und Informationswissenschaft.</em><br>
+                <strong>Provenienzforschung zu NS-Raubgut in Bibliotheken:</strong> Eine inhaltsanalytische Studie deutschsprachiger Fachliteratur (2014–2024).<br>
+                <em>Bachelorarbeit, Berliner Handreichungen zur Bibliotheks- und Informationswissenschaft.</em><br>
                 [<a href="https://edoc.hu-berlin.de/items/d105036b-7c94-49f1-b7a7-10108b44f29a" target="_blank">E-Doc HU Berlin</a>] 
                 [<a href="https://edoc.hu-berlin.de/server/api/core/bitstreams/3c5c2801-a7ec-404d-82c5-af274c706bbf/content" target="_blank">PDF laden</a>]
             </article>
