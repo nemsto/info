@@ -2,47 +2,135 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nemanja Stojanović</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glitch-fonts/latin-modern-mono@1.1.0/index.min.css">
+    
     <style>
         body {
-            /* Hier wird LM Mono aktiviert */
             font-family: "Latin Modern Mono", monospace;
-            line-height: 1.5;
+            line-height: 1.6;
             max-width: 850px;
             margin: 50px auto;
             padding: 0 30px;
-            color: #000;
+            color: #1a1a1a;
             background-color: #fff;
-            /* Blocksatz für den echten Dokumenten-Look */
             text-align: justify;
         }
 
-    <h1>Nemanja Stojanović, B. A. LIS</h1>
-    
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="#projekte">Projekte</a>
-        <a href="#kontakt">Kontakt</a>
-    </nav>
+        h1 {
+            font-size: 1.8em;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 5px;
+        }
 
-    <section>
-        <p>Willkommen auf meiner Seite. Ich bin Masterstudent am Institut für Bibliotheks- und Informationswissenschaft an der Humboldt-Universität zu Berlin.</p>
-    </section>
+        h2 {
+            font-size: 1.4em;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
 
-    <h2 id="projekte">Meine Veröffentlichungen</h2>
-    <ul class="project-list">
-        <li class="project-item">
-            <strong>Provenienzforschung zu NS-Raubgut in Bibliotheken:</strong> Eine inhaltsanalytische Studie deutschsprachiger Fachliteratur (2014–2024). 
-            [<a href="https://edoc.hu-berlin.de/items/d105036b-7c94-49f1-b7a7-10108b44f29a">Berliner Handreichungen zur Bibliotheks- und Informationswissenschaft</a>] [<a href="https://edoc.hu-berlin.de/server/api/core/bitstreams/3c5c2801-a7ec-404d-82c5-af274c706bbf/content">PDF laden</a>]
-        </li>
-        <li class="project-item">
-            <strong>Projekt Zwei:</strong> Hier beschreibst du dein zweites Projekt.
-        </li>
-    </ul>
+        nav {
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
 
-    <div class="footer">
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #003366; /* Ein dezentes Uniblau */
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        .project-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .project-item {
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 1px solid #ddd;
+        }
+
+        .footer {
+            margin-top: 60px;
+            font-size: 0.85em;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        a {
+            color: #0044cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Anpassung für Mobilgeräte */
+        @media (max-width: 600px) {
+            body {
+                margin: 20px auto;
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nemanja Stojanović, B. A. LIS</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#projekte">Veröffentlichungen</a>
+            <a href="mailto:deine-email@hu-berlin.de">Kontakt</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <p>
+                Willkommen auf meiner Seite. Ich bin Masterstudent am 
+                <strong>Institut für Bibliotheks- und Informationswissenschaft</strong> 
+                an der Humboldt-Universität zu Berlin. Meine Schwerpunkte liegen in der 
+                Provenienzforschung und der Analyse wissenschaftlicher Fachliteratur.
+            </p>
+        </section>
+
+        <h2 id="projekte">Meine Veröffentlichungen</h2>
+        <div class="project-list">
+            <article class="project-item">
+                <strong>Provenienzforschung zu NS-Raubgut in Bibliotheken:</strong> 
+                Eine inhaltsanalytische Studie deutschsprachiger Fachliteratur (2014–2024).<br>
+                <em>Berliner Handreichungen zur Bibliotheks- und Informationswissenschaft.</em><br>
+                [<a href="https://edoc.hu-berlin.de/items/d105036b-7c94-49f1-b7a7-10108b44f29a" target="_blank">E-Doc HU Berlin</a>] 
+                [<a href="https://edoc.hu-berlin.de/server/api/core/bitstreams/3c5c2801-a7ec-404d-82c5-af274c706bbf/content" target="_blank">PDF laden</a>]
+            </article>
+
+            <article class="project-item">
+                <strong>Weiteres Projekt / Thesis:</strong> 
+                Hier kannst du Details zu einem weiteren Forschungsprojekt oder deiner Masterarbeit einfügen.
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        &copy; 2026 Nemanja Stojanović &middot; Humboldt-Universität zu Berlin &middot; 
         Zuletzt aktualisiert: März 2026
-    </div>
+    </footer>
 
 </body>
 </html>
