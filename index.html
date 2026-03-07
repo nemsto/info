@@ -13,12 +13,12 @@
             max-width: 750px;
             margin: 60px auto;
             padding: 0 40px;
-            color: #333;
-            background-color: #fcfcfc;
+            color: #000;
+            background-color: #fff;
         }
 
         header {
-            border-bottom: 3px solid #003366;
+            border-bottom: 2px solid #000;
             padding-bottom: 20px;
             margin-bottom: 30px;
         }
@@ -26,17 +26,25 @@
         h1 {
             font-size: 1.8em;
             margin: 0 0 10px 0;
-            color: #111;
+            font-weight: bold;
+        }
+
+        .pronouns {
+            font-size: 0.5em;
+            font-weight: normal;
+            color: #666;
+            vertical-align: middle;
+            margin-left: 8px;
         }
 
         h2 {
             font-size: 1.1em;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #000;
             padding-bottom: 5px;
             margin-top: 45px;
-            color: #003366;
+            font-weight: bold;
         }
 
         nav {
@@ -47,13 +55,16 @@
         nav a {
             margin-right: 20px;
             text-decoration: none;
-            color: #003366;
+            color: #000;
             font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         .intro {
             font-size: 1.05em;
-            color: #444;
             margin-bottom: 40px;
         }
 
@@ -65,7 +76,7 @@
         .cv-date {
             flex: 0 0 170px;
             font-weight: bold;
-            color: #777;
+            color: #555;
             font-size: 0.85em;
         }
 
@@ -74,17 +85,17 @@
         }
 
         .institution {
-            color: #555;
+            color: #444;
             display: block;
             margin-bottom: 8px;
+            font-style: italic;
         }
 
         .work-tasks-header {
             display: block;
             margin-top: 12px;
             margin-bottom: 4px;
-            font-style: italic;
-            color: #666;
+            font-weight: bold;
             font-size: 0.9em;
         }
 
@@ -102,47 +113,73 @@
         }
 
         .cv-content li::before {
-            content: "•";
+            content: "▪"; 
             position: absolute;
             left: 0;
-            color: #003366;
+            color: #000;
         }
 
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
-            background: #f9f9f9;
+            background: #fff;
             padding: 20px;
-            border-radius: 4px;
-            border: 1px solid #eee;
+            border: 1px solid #000;
         }
 
         .skill-category strong {
             display: block;
             margin-bottom: 5px;
             font-size: 0.9em;
-            color: #003366;
+            text-decoration: underline;
         }
 
         .project-item {
             padding: 15px;
-            background: #fff;
-            border-left: 4px solid #003366;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border: 1px solid #000;
+            margin-bottom: 10px;
+        }
+
+        .license-tag {
+            font-size: 0.8em;
+            color: #000;
+            margin-top: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .license-icon {
+            height: 18px;
+            margin-right: 8px;
+            filter: grayscale(100%);
         }
 
         .footer {
             margin-top: 80px;
             font-size: 0.75em;
-            color: #999;
+            color: #666;
             text-align: center;
-            border-top: 1px solid #eee;
+            border-top: 1px solid #000;
             padding-top: 20px;
         }
 
-        a { color: #0055aa; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        .footer-license {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        a { color: #000; text-decoration: underline; }
+        a:hover { background: #000; color: #fff; text-decoration: none; }
+
+        .orcid-icon {
+            width: 18px;
+            vertical-align: middle;
+            margin-left: 8px;
+            filter: grayscale(100%) contrast(200%);
+        }
 
         @media (max-width: 600px) {
             .cv-item { flex-direction: column; }
@@ -155,9 +192,10 @@
 
     <header>
         <h1>
-            Nemanja Stojanović, B. A. LIS
+            Nemanja Stojanović, B. A. LIS 
+            <span class="pronouns">(er/ihm)</span>
             <a href="https://orcid.org/0009-0004-9270-3880" target="_blank">
-                <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" style="width:18px; vertical-align:middle; margin-left:8px;">
+                <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" class="orcid-icon">
             </a>
         </h1>
         <nav>
@@ -214,7 +252,7 @@
             <div class="cv-date">Seit 09/2024</div>
             <div class="cv-content">
                 <strong>Bibliothekarische Hilfskraft (Benutzungsdienst)</strong>
-                <span class="institution">Freie Universität Berlin, Universitätsbibliothek, Bibliothek für Sozialwissenschaften und Osteuropastudien, Berlin</span>
+                <span class="institution">Freie Universität Berlin, Universitätsbibliothek (Sozialwissenschaften & Osteuropastudien)</span>
                 
                 <span class="work-tasks-header">Tätigkeitsschwerpunkte:</span>
                 <ul>
@@ -252,11 +290,20 @@
             <em>Bachelorarbeit, Berliner Handreichungen zur Bibliotheks- und Informationswissenschaft.</em><br>
             <a href="https://edoc.hu-berlin.de/items/d105036b-7c94-49f1-b7a7-10108b44f29a" target="_blank">→ E-Doc HU Berlin</a> | 
             <a href="https://edoc.hu-berlin.de/server/api/core/bitstreams/3c5c2801-a7ec-404d-82c5-af274c706bbf/content" target="_blank">PDF</a>
+            
+            <div class="license-tag">
+                <img class="license-icon" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png" alt="CC BY">
+                Lizenz: CC BY 4.0
+            </div>
         </div>
     </main>
 
     <footer class="footer">
         &copy; 2026 Nemanja Stojanović &middot; Humboldt-Universität zu Berlin
+        <div class="footer-license">
+            <img class="license-icon" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/cc-zero.png" alt="CC0">
+            Code & Inhalte lizenziert unter <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de" target="_blank" style="margin-left: 5px;">CC0 1.0</a>
+        </div>
     </footer>
 
 </body>
