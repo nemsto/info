@@ -9,228 +9,254 @@
         body {
             font-family: Verdana, Geneva, sans-serif;
             font-size: 14px;
-            line-height: 1.5;
+            line-height: 1.6;
             max-width: 750px;
-            margin: 40px auto;
-            padding: 0 30px;
-            color: #222;
-            background-color: #fff;
-            text-align: left;
+            margin: 60px auto;
+            padding: 0 40px;
+            color: #333;
+            background-color: #fcfcfc;
+        }
+
+        header {
+            border-bottom: 3px solid #003366;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         h1 {
             font-size: 1.8em;
-            font-weight: bold;
-            border-bottom: 1px solid #333;
-            padding-bottom: 8px;
-            margin-bottom: 5px;
-        }
-
-        .orcid-line {
-            margin-bottom: 20px;
-            font-size: 0.85em;
-            color: #555;
-        }
-
-        .orcid-line a {
-            color: #555;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .orcid-line img {
-            width: 16px;
-            height: 16px;
-            margin-right: 4px;
+            margin: 0 0 10px 0;
+            color: #111;
         }
 
         h2 {
-            font-size: 1.2em;
-            font-weight: bold;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 3px;
-            margin-top: 35px;
-            color: #333;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 45px;
+            color: #003366;
         }
 
         nav {
-            margin-bottom: 30px;
             font-size: 0.85em;
+            margin-top: 15px;
         }
 
         nav a {
-            margin-right: 15px;
+            margin-right: 20px;
             text-decoration: none;
             color: #003366;
             font-weight: bold;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        .intro {
+            font-size: 1.05em;
+            color: #444;
+            margin-bottom: 40px;
         }
 
         .cv-item {
             display: flex;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
+            margin-bottom: 25px;
         }
 
         .cv-date {
-            flex: 0 0 160px;
+            flex: 0 0 170px;
             font-weight: bold;
-            color: #555;
-            font-size: 0.9em;
+            color: #777;
+            font-size: 0.85em;
         }
 
         .cv-content {
             flex: 1;
         }
 
-        /* Abstand vor Tätigkeitsschwerpunkten */
+        .institution {
+            color: #555;
+            display: block;
+            margin-bottom: 8px;
+        }
+
         .work-tasks-header {
             display: block;
-            margin-top: 12px; 
+            margin-top: 12px;
             margin-bottom: 4px;
             font-style: italic;
+            color: #666;
+            font-size: 0.9em;
         }
 
         .cv-content ul {
             list-style-type: none;
             padding-left: 0;
-            margin-top: 5px;
+            margin: 0;
         }
 
         .cv-content li {
-            margin-bottom: 3px;
+            margin-bottom: 4px;
             font-size: 0.95em;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .cv-content li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #003366;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 4px;
+            border: 1px solid #eee;
+        }
+
+        .skill-category strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+            color: #003366;
         }
 
         .project-item {
-            margin-bottom: 20px;
-            padding-left: 15px;
-            border-left: 2px solid #eee;
+            padding: 15px;
+            background: #fff;
+            border-left: 4px solid #003366;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
         .footer {
-            margin-top: 60px;
+            margin-top: 80px;
             font-size: 0.75em;
-            color: #888;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
+            color: #999;
             text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
         }
 
-        a {
-            color: #0055aa;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
+        a { color: #0055aa; text-decoration: none; }
+        a:hover { text-decoration: underline; }
 
         @media (max-width: 600px) {
             .cv-item { flex-direction: column; }
-            .cv-date { margin-bottom: 2px; flex: 0 0 auto; }
+            .cv-date { margin-bottom: 5px; }
+            .skills-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>
-        Nemanja Stojanović, B. A. LIS
-        <a href="https://orcid.org/0009-0003-0570-0823" target="_blank" style="text-decoration: none;">
-            <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" 
-                 alt="ORCID iD icon" 
-                 style="width: 18px; height: 18px; vertical-align: middle; margin-left: 8px;">
-        </a>
-    </h1>
-
-    <nav>
-        <a href="#cv">Lebenslauf</a>
-        <a href="#projekte">Veröffentlichungen</a>
-        <a href="mailto:nemanja.stojanovic@hu-berlin.de">Kontaktiere mich</a>
-    </nav>
-</header>
+    <header>
+        <h1>
+            Nemanja Stojanović, B. A. LIS
+            <a href="https://orcid.org/0009-0004-9270-3880" target="_blank">
+                <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" style="width:18px; vertical-align:middle; margin-left:8px;">
+            </a>
+        </h1>
+        <nav>
+            <a href="#about">Über mich</a>
+            <a href="#cv">Lebenslauf</a>
+            <a href="#skills">Expertise</a>
+            <a href="#projekte">Publikationen</a>
+        </nav>
+    </header>
 
     <main>
-        <section>
+        <section id="about" class="intro">
             <p>
-                Willkommen auf meiner Seite. Ich bin Masterstudent am 
-                <strong>Institut für Bibliotheks- und Informationswissenschaft</strong> 
-                an der Humboldt-Universität zu Berlin. Meine Schwerpunkte liegen in der 
-                Provenienzforschung sowie der Analyse wissenschaftlicher Fachliteratur.
+                Masterstudent am <strong>Institut für Bibliotheks- und Informationswissenschaft</strong> der Humboldt-Universität zu Berlin. 
+                Spezialisierung auf <strong>Provenienzforschung</strong> sowie die Erschließung wissenschaftlicher Altbestände und moderner Fachliteratur.
             </p>
         </section>
 
-        <h2 id="cv">Bibliothekarischer Werdegang</h2>
-        <div class="cv-section">
-            
-            <div class="cv-item">
-                <div class="cv-date">Seit 04/2026</div>
-                <div class="cv-content">
-                    <strong>M. A. Information Science</strong><br>
-                    Humboldt-Universität zu Berlin
-                </div>
+        <h2 id="cv">Akademischer & Beruflicher Werdegang</h2>
+        
+        <div class="cv-item">
+            <div class="cv-date">Seit 04/2026</div>
+            <div class="cv-content">
+                <strong>M. A. Information Science</strong>
+                <span class="institution">Humboldt-Universität zu Berlin</span>
             </div>
+        </div>
 
-           <div class="cv-item">
-                <div class="cv-date">10/2021 &ndash; 09/2025</div>
-                <div class="cv-content">
-                    <strong>B. A. Bibliotheks- und Informationswissenschaft</strong><br>
-                    Humboldt-Universität zu Berlin (Abschlussnote: 2,2)
-                </div>
+        <div class="cv-item">
+            <div class="cv-date">10/2021 &ndash; 09/2025</div>
+            <div class="cv-content">
+                <strong>B. A. Bibliotheks- und Informationswissenschaft</strong>
+                <span class="institution">Humboldt-Universität zu Berlin (Abschlussnote: 2,2)</span>
             </div>
+        </div>
 
-            <div class="cv-item">
-                <div class="cv-date">03/2024 &ndash; 12/2024</div>
-                <div class="cv-content">
-                    <strong>Studentische Hilfskraft</strong><br>
-                    Deutsches Institut für Menschenrechte, Institutsbibliothek, Berlin<br>
-                    
-                    <span class="work-tasks-header">Tätigkeitsschwerpunkte:</span>
-                    <ul>
-                        <li>&ndash; Erschließung: Aufsatz-Katalogisierung (RDA) im PICA-System (K10plus)</li>
-                        <li>&ndash; Web-Redaktion: Pflege des Zeitschrifteninhaltsdienstes via CMS TYPO3</li>
-                        <li>&ndash; Benutzungsdienst: Fernleihverwaltung, interne Ausleihe, Auskunft</li>
-                        <li>&ndash; Bestandsverwaltung: Loseblattsammlungen, Magazindienste</li>
-                    </ul>
-                </div>
+        <div class="cv-item">
+            <div class="cv-date">03/2024 &ndash; 12/2024</div>
+            <div class="cv-content">
+                <strong>Studentische Hilfskraft</strong>
+                <span class="institution">Deutsches Institut für Menschenrechte, Institutsbibliothek, Berlin</span>
+                
+                <span class="work-tasks-header">Tätigkeitsschwerpunkte:</span>
+                <ul>
+                    <li>Erschließung: Aufsatz- und Monografien-Katalogisierung (RDA) im PICA-System (K10plus) sowie Sacherschließung</li>
+                    <li>Web-Redaktion: Pflege des Zeitschrifteninhaltsdienstes via CMS TYPO3</li>
+                    <li>Benutzungsdienst: Fernleihverwaltung, interne Ausleihe sowie Aufsicht und Auskunft</li>
+                    <li>Bestandsverwaltung: Loseblattsammlungen und allgemeine Magazindienste</li>
+                </ul>
             </div>
+        </div>
 
-            <div class="cv-item">
-                <div class="cv-date">Seit 09/2024</div>
-                <div class="cv-content">
-                    <strong>Bibliothekarische Hilfskraft (Benutzungsdienst)</strong><br>
-                    Freie Universität Berlin, Universitätsbibliothek, Bibliothek für Sozialwissenschaften und Osteuropastudien<br>
-                    
-                    <span class="work-tasks-header">Tätigkeitsschwerpunkte:</span>
-                    <ul>
-                        <li>&ndash; Benutzerservice: Ausleihe, Rücknahme und Kontenverwaltung</li>
-                        <li>&ndash; Auskunftsdienst: Beratung zu Bestand und Bibliotheksbenutzung</li>
-                        <li>&ndash; Technischer Support: WLAN, Thin Clients</li>
-                        <li>&ndash; Magazindienst & Lesesaal: Bereitstellung geschützter Bestände</li>
-                    </ul>
-                </div>
+        <div class="cv-item">
+            <div class="cv-date">Seit 09/2024</div>
+            <div class="cv-content">
+                <strong>Bibliothekarische Hilfskraft (Benutzungsdienst)</strong>
+                <span class="institution">Freie Universität Berlin, Universitätsbibliothek, Bibliothek für Sozialwissenschaften und Osteuropastudien, Berlin</span>
+                
+                <span class="work-tasks-header">Tätigkeitsschwerpunkte:</span>
+                <ul>
+                    <li>Benutzerservice: Ausleihe, Rücknahme und Kontenverwaltung</li>
+                    <li>Auskunftsdienst: Fachliche Beratung zu Bestand und Bibliotheksbenutzung</li>
+                    <li>Technischer Support: Unterstützung bei der Nutzung der IT-Infrastruktur (WLAN, Thin Clients)</li>
+                    <li>Magazindienst: Bereitstellung geschützter Bestände und Aushebung aus dem Magazin</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 id="skills">Expertise & Fähigkeiten</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <strong>Metadaten & Katalogisierung</strong>
+                RDA, PICA, K10plus, Sacherschließung
+            </div>
+            <div class="skill-category">
+                <strong>Software & CMS</strong>
+                TYPO3, Alma, Zotero, MS Office, LibreOffice
+            </div>
+            <div class="skill-category">
+                <strong>Sprachen</strong>
+                Deutsch & Serbokroatisch (2L1), Englisch (B2/C1)
+            </div>
+            <div class="skill-category">
+                <strong>Forschungsschwerpunkte</strong>
+                Provenienzforschung, NS-Raubgut, Fachliteraturanalyse
             </div>
         </div>
 
         <h2 id="projekte">Veröffentlichungen</h2>
-        <div class="project-list">
-            <article class="project-item">
-                <strong>Provenienzforschung zu NS-Raubgut in Bibliotheken:</strong> Eine inhaltsanalytische Studie deutschsprachiger Fachliteratur (2014–2024).<br>
-                <em>Bachelorarbeit, Berliner Handreichungen zur Bibliotheks- und Informationswissenschaft.</em><br>
-                [<a href="https://edoc.hu-berlin.de/items/d105036b-7c94-49f1-b7a7-10108b44f29a" target="_blank">E-Doc HU Berlin</a>] 
-                [<a href="https://edoc.hu-berlin.de/server/api/core/bitstreams/3c5c2801-a7ec-404d-82c5-af274c706bbf/content" target="_blank">PDF laden</a>]
-            </article>
+        <div class="project-item">
+            <strong>Provenienzforschung zu NS-Raubgut in Bibliotheken:</strong> Eine inhaltsanalytische Studie deutschsprachiger Fachliteratur (2014–2024).<br>
+            <em>Bachelorarbeit, Berliner Handreichungen zur Bibliotheks- und Informationswissenschaft.</em><br>
+            <a href="https://edoc.hu-berlin.de/items/d105036b-7c94-49f1-b7a7-10108b44f29a" target="_blank">→ E-Doc HU Berlin</a> | 
+            <a href="https://edoc.hu-berlin.de/server/api/core/bitstreams/3c5c2801-a7ec-404d-82c5-af274c706bbf/content" target="_blank">PDF</a>
         </div>
     </main>
 
     <footer class="footer">
-        &copy; 2026 Nemanja Stojanović &middot; Humboldt-Universität zu Berlin <br>
-        Zuletzt aktualisiert: März 2026
+        &copy; 2026 Nemanja Stojanović &middot; Humboldt-Universität zu Berlin
     </footer>
 
 </body>
